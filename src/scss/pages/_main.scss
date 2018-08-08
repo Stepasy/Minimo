@@ -4,6 +4,7 @@ body{
     display: flex;
     flex-direction: column;
     word-wrap: break-word;
+    overflow-x:  hidden;
 
 }
 
@@ -44,6 +45,11 @@ li{
 
     nav{
         margin-top: -3px;
+        max-width: 100%;
+
+        .fas{
+            display: none;
+        }
     }
     
     ul{
@@ -51,11 +57,12 @@ li{
         flex-direction: row;
 
         li{
-            margin-left: 100px;
 
             a{
 
                 color: #626262;
+                margin-left: 5em;
+
 
             }
 
@@ -74,14 +81,16 @@ li{
 
 .img-holder{
 
-    padding-top: 71px;
-    padding-bottom: 95px;
-
-    img{
-
+    max-width: 100%;
+    margin-top: 71px;
+    margin-bottom: 95px;
     width: 1062px;
     height: 512px;
 
+    .img-holder__image
+    {
+        width: 100vw;
+        height: auto;
     }
 
 }
@@ -224,7 +233,7 @@ li{
 
 
 #posts {
-    padding-bottom: 1360px;
+    padding-bottom: 50px;
 }
 
 
@@ -265,4 +274,49 @@ footer{
         }
     }
 
+}
+
+@media (max-width: 1064px){
+    .wrapper-top{
+        padding: 0;
+        width: 100%;
+        margin-left: 10px;
+        .img-holder{
+            width: 100%;
+        }
+    } 
+
+    .header{
+
+        .fas fa-bars{
+            display: flex;
+        }
+
+        ul{
+            display: none;
+        }
+    }
+
+    .wrapper-posts{
+        width: 100%;    
+        margin-left: 10px;
+    }
+
+    .email {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: none;
+
+    }
+
+    .signup{
+        border-bottom: none;
+    }
+
+    .input{
+        border-bottom: 4px solid #000000;
+
+    }
+    
 }
